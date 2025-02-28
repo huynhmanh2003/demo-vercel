@@ -12,7 +12,7 @@ app.use(express.json());
 
 app.use("/api/boards", require("./api/boardRoutes"));
 
-app.get("/", (req, res) => res.send("Hello World"));
+app.use("/", (req, res) => res.send("Hello World"));
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
