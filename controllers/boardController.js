@@ -1,6 +1,7 @@
 const Board = require("../models/Board");
 
 exports.getBoards = async (req, res) => {
+  console.log(hehe);
   try {
     const boards = await Board.find().populate("lists");
     res.status(200).json(boards);
